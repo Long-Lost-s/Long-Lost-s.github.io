@@ -2,15 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Route, Router } from 'react-router'
+import { Route, Routes } from 'react-router'
+import { Home } from './pages/home'
+import { About } from './pages/about'
 
 function App() {
 
   return (
-    <Router>
-      <Route index element={<div>Home</div>} />
-      <Route path="/about" element={<div>About</div>} />
-    </Router>
+    <Routes>
+      <Route index element={<Home />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
   )
 }
 
